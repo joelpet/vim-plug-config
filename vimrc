@@ -90,7 +90,7 @@ noremap <leader>cd :cd %:p:h<cr>
 inoremap <S-CR> <CR><Esc>O
 
 " Format JSON using python
-noremap <leader>fj :%!python -m json.tool<cr>
+noremap <leader>fj :%!python -m json.tool<cr>:set filetype=json<cr>
 
 " => Plugins
 """""""""""""
