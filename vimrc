@@ -89,6 +89,9 @@ noremap <leader>cd :cd %:p:h<cr>
 " Useful newline mapping when between braces. {|} => {\n<indent>|\n}
 inoremap <S-CR> <CR><Esc>O
 
+" Format JSON using python
+noremap <leader>fj :%!python -m json.tool<cr>
+
 " => Plugins
 """""""""""""
   " Airline
