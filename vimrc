@@ -47,6 +47,7 @@ set scrolloff=3 "minimal number of screen lines to keep above/below the cursor
 """"""""""""""""""""""""
 syntax enable "turn on syntax highlighting
 set ruler "show the line and column number of the cursor position
+set cursorline "highlight the screen line of the cursor
 set laststatus=2 "always show statusline
 set t_Co=256
 let g:solarized_termcolors=256
