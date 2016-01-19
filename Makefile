@@ -4,9 +4,10 @@ VIM_PLUG_PATH=~/.vim/autoload/plug.vim
 VIM_PLUG_URL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 VIMRC_PATH=~/.vimrc
 GVIMRC_PATH=~/.gvimrc
+IDEAVIMRC_PATH=~/.ideavimrc
 
 .PHONY: setup
-setup: download link_rc plug_install
+setup: download link_rc ideavimrc plug_install
 
 .PHONY: download
 download:
@@ -16,6 +17,10 @@ download:
 link_rc:
 	ln --backup --force --symbolic $(MAKEFILE_PATH)vimrc $(VIMRC_PATH)
 	ln --backup --force --symbolic $(MAKEFILE_PATH)gvimrc $(GVIMRC_PATH)
+
+.PHONY: ideavimrc
+ideavimrc:
+	echo "source $(VIMRC_PATH)" > $(IDEAVIMRC_PATH)
 
 .PHONY: plug_install
 plug_install:
