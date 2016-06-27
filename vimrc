@@ -180,6 +180,7 @@ if !exists("autocommands_loaded")
     let autocommands_loaded = 1
 
     "Prevent passwords from `pass` leaking into swap, backup and undo files
-    au BufNewFile,BufRead /dev/shm/pass.* setlocal noswapfile nobackup noundofile
+    autocmd BufNewFile,BufRead /dev/shm/pass.* \
+    setlocal noswapfile nobackup noundofile
 endif
 
