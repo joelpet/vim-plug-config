@@ -182,5 +182,7 @@ if !exists("autocommands_loaded")
     "Prevent passwords from `pass` leaking into swap, backup and undo files
     autocmd BufNewFile,BufRead /dev/shm/pass.* \
     setlocal noswapfile nobackup noundofile
+
+    autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 endif
 
