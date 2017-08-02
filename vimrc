@@ -2,7 +2,6 @@
 """"""""""""""
 call plug#begin()
 
-Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'Rip-Rip/clang_complete'
 Plug 'SirVer/ultisnips'
 Plug 'Townk/vim-autoclose'
@@ -10,7 +9,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
-Plug 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'jnurmine/Zenburn'
 Plug 'jnwhiteh/vim-golang'
@@ -81,7 +79,6 @@ set smarttab "makes a <Tab> in front of a line insert blanks according to 'shift
 " => Key mappings
 """"""""""""""""""
 let mapleader = "," "change map leader (<Leader>)
-"LaTeX-Box interfers with ,lv and ,ll in LaTeX-Suite so leave it like this for now.
 "let maplocalleader = "," "change map leader (<Leader>)
 
 " Quick Escape
@@ -147,12 +144,6 @@ noremap <leader>fj :%!python -m json.tool<cr>:set filetype=json<cr>
   " delimitMate
   """"""""""""""
   let delimitMate_excluded_ft = "xml"
-
-  " LatexBox
-  """""""""""
-  let g:LatexBox_latexmk_options = "-pvc"
-  let g:LatexBox_output_type = "dvi"
-  let g:LatexBox_cite_pattern = '\c\\\a*\(cite\|quote\)\a*\*\?\_\s*{'
 
   " NERD Tree
   """"""""""""
